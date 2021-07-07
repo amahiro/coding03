@@ -1225,7 +1225,7 @@ page
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(../../../images/work-731198_1280.jpg);
+  background-image: url(https://github.com/amahiro/coding03/blob/main/images/work-731198_1280.jpg?raw=true);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1241,7 +1241,7 @@ page
   position: absolute;
   top: 0;
   right: 0;
-  background-image: url(../../../images/buildings-984195_1280.jpg);
+  background-image: url(https://github.com/amahiro/coding03/blob/main/images/buildings-984195_1280.jpg?raw=true);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1804,15 +1804,15 @@ page
 }
 
 .service__item:first-child {
-  background-image: url(../../../images/phone-292994_640.jpg);
+  background-image: url(https://github.com/amahiro/coding03/blob/main/images/phone-292994_640.jpg?raw=true);
 }
 
 .service__item:nth-child(2) {
-  background-image: url(../../../images/work-5382501_640.jpg);
+  background-image: url(https://github.com/amahiro/coding03/blob/main/images/work-5382501_640.jpg?raw=true);
 }
 
 .service__item:last-child {
-  background-image: url(../../../images/analogue-2846297_640.jpg);
+  background-image: url(https://github.com/amahiro/coding03/blob/main/images/analogue-2846297_640.jpg?raw=true);
 }
 
 .news {
@@ -2252,7 +2252,7 @@ page
   margin-bottom: 240px;
   padding: 100px 0;
   text-align: center;
-  background-image: url(../../../images/buildings-984195_1280.jpg);
+  background-image: url(https://github.com/amahiro/coding03/blob/main/images/buildings-984195_1280.jpg?raw=true);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
