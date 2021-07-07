@@ -1,0 +1,64 @@
+.footer {
+    padding: 80px 0 130px;
+    background-color: #00478E;
+    @include mq() {
+        padding: 80px 0;
+    }
+    @include mq(sp) {
+        padding: 40px 0 20px;
+    }
+}
+.footer__inner {
+    margin: 0 auto;
+    width: 60%;
+    @include mq(tab) {
+        width: 90%;
+    }
+    @include mq(sp) {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+.footer__body {
+    align-items: flex-start;
+    @include mq(sp) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.footer__info {
+    align-self: flex-start;
+    > .logo {
+        margin-bottom: 30px;
+    }
+    > .info__item {
+        margin-bottom: 10px;
+        &:nth-child(4) {
+            margin-bottom: 0;
+            @include mq(sp) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+.footer__nav {
+    > .fnav__item {
+        margin-bottom: 30px;
+        @include mq(sp) {
+            margin-bottom: 20px;
+        }
+    }
+}
+.footer__copy {
+    margin-top: -60px;
+    @include font-size(24);
+    @include mq() {
+        @include font-size(16);
+    }
+    @include mq(sp) {
+        margin-top: 0;
+        text-align: center;
+        @include font-size(10);
+    }
+    color: #fff;
+}

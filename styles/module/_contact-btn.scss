@@ -1,0 +1,47 @@
+.contact-btn {
+    display: inline-block;
+    background-color: #00478E;
+    transition: all .3s;
+    > a {
+        display: inline-block;
+        padding: 25px 60px;
+        @include font-size(24);
+        color: #fff;
+        @include mq() {
+            @include font-size(16);
+        }
+        @include mq(pc-sm) {
+            padding: 20px 30px;
+        }
+        @include mq(sp) {
+            padding: 15px 20px;
+        }
+    }
+    &:hover {
+        background-color: #000a66;
+    }
+    &--white {
+        background-color: #fff;
+        > a {
+            color: $font-color;
+        }
+        &:hover {
+            background-color: rgb(214, 214, 214);
+        }
+    }
+    &--bg {
+        > a {
+            padding: 40px 150px;
+            font-weight: bold;
+            @include font-size(32);
+            @include mq(tab) {
+                padding: 30px 60px;
+                @include font-size(20);
+            }
+            @include mq(sp) {
+                padding: 20px 20px;
+                @include font-size(14);
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.more-btn {
+    > a {
+        display: inline-block;
+        white-space: nowrap;
+        transition: all .3s;
+        @include font-size(16);
+        color: $font-color;
+        &::after {
+            content: '>';
+            display: inline-block;
+            transform: translateX(5px);
+            transition: all .3s;
+        }
+        &:hover {
+            opacity: .6;
+            &::after {
+                transform: translateX(8px);
+            }
+        }
+    }
+}

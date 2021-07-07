@@ -1,0 +1,30 @@
+.appear {
+	position: relative;
+	z-index: -1;
+    > .appear-background {
+		animation: slide-left 1s ease forwards;
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		transform: scaleX(0);
+		background-color: #00478E;
+		width: 100%;
+		height: 100vh;
+		z-index: 9999;
+	}
+	> .header {
+		animation: opacity 1s 0.6s forwards;
+		opacity: 0;
+	}
+    > .main-visual {
+        animation: opacity 1s 0.6s forwards;
+		opacity: 0;
+    }
+    > main {
+        > .about {
+            animation: opacity 1s 0.6s forwards;
+            opacity: 0;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.logo {
+    transition: all .3s;
+    &:hover {
+        opacity: .6;
+    }
+    &__ja {
+        display: block;
+        @include font-size(40);
+        color: $font-color;
+        @include mq() {
+            @include font-size(30);
+        }
+        @include mq(pc-sm) {
+            @include font-size(24);
+        }
+    }
+    &__en {
+        display: block;
+        font-weight: lighter;
+        @include font-size(24);
+        color: $font-color;
+        @include mq() {
+            @include font-size(10);
+        }
+    }
+    &--footer {
+        &:hover {
+            opacity: 1;
+        }
+        > .logo__ja {
+            color: #fff;
+        }
+        > .logo__en {
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.hamburger {
+    display: none;
+    z-index: 9999;
+    @include mq(tab) {
+        display: block;
+    }
+    > span {
+        position: relative;
+        display: block;
+        background-color: $font_color;
+        width: 30px;
+        height: 2px;
+        transition: all .3s;
+        &:first-child {
+            margin-bottom: 4px;
+        }
+        &:nth-child(2) {
+            margin-bottom: 4px;
+        }
+    }
+}
+.hamburger-open {
+    > span {
+        &:nth-child(1) {
+            transform: translateY(6px) rotate(-30deg);
+            background-color: #333333;
+        }
+        &:nth-child(2) {
+            opacity: 0;
+        }
+        &:nth-child(3) {
+            transform: translateY(-6px) rotate(30deg);
+            background-color: #333333;
+        }
+    }
+    + nav {
+        visibility: visible;
+        opacity: 1;
+    }
+}

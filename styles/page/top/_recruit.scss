@@ -1,0 +1,100 @@
+.recruit {
+    margin-bottom: 240px;
+    @include mq(pc-sm) {
+        margin-bottom: 0;
+    }
+    @include mq(sp) {
+        margin-bottom: 80px;
+    }
+}
+.recruit__inner {
+    margin: 0 auto;
+    width: 80%;
+    @include mq() {
+        width: 90%;
+    }
+    @include mq(sp) {
+        width: 100%;
+    }
+}
+.recruit__body {
+    @include mq(pc-sm) {
+        &.flex {
+            flex-direction: column;
+        }
+    }
+}
+.recruit__text {
+    padding: 50px 80px 80px 50px;
+    margin-right: 80px;
+    background-color: #00478E;
+    width: 50%;
+    @include mq() {
+        margin-right: 40px;
+        width: 60%;
+    }
+    @include mq(pc-sm) {
+        margin-right: 0;
+        width: 100%;
+        padding-bottom: 280px;
+    }
+    @include mq(tab) {
+        padding-right: 50px;
+        padding-bottom: 190px;
+    }
+    @include mq(sp) {
+        padding: 80px 20px 0;
+    }
+}
+.recruit__title {
+    margin-bottom: 40px;
+    @include mq(sp) {
+        margin-bottom: 30px;
+        text-align: right;
+    }
+}
+.recruit__title-ja {
+    margin-bottom: 60px;
+    @include mq(sp) {
+        margin-bottom: 30px;
+    }
+}
+.recruit__lead {
+    margin-bottom: 150px;
+    max-width:500px;
+    @include mq(pc-sm) {
+        margin-bottom: 40px;
+    }
+    @include mq(tab) {
+        max-width: 700px;
+        width: 100%;
+    }
+}
+.recruit__btn {
+    text-align: right;
+    > a {
+        color: #fff;
+    }
+    @include mq(pc-sm) {
+        text-align: left;
+    }
+    @include mq(sp) {
+        margin-bottom: 30px;
+        text-align: right;
+    }
+}
+.recruit__image {
+    position: relative;
+    flex: 1;
+    @include mq(pc-sm) {
+        transform: translateY(-240px);
+        width: 85%;
+    }
+    @include mq(tab) {
+        transform: translateY(-150px);
+    }
+    @include mq(sp) {
+        transform: translateY(0);
+        width: 100%;
+    }
+}

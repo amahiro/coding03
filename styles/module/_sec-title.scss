@@ -1,0 +1,55 @@
+.sec-title {
+    display: block;
+    font-weight: bold;
+    @include font-size(144);
+    color: #00478E;
+    opacity: .5;
+    @include mq(tab) {
+        @include font-size(100);
+    }
+    @include mq(sp) {
+        margin-bottom: 30px;
+        @include font-size(50);
+    }
+    &--white {
+        @extend .sec-title;
+        color: #fff;
+        @include mq(sp) {
+            margin-bottom: 30px;
+        }
+    }
+}
+.sec-title__ja {
+    font-weight: bold;
+    @include font-size(40);
+    color: $font-color;
+    @include mq() {
+        @include font-size(24);
+    }
+    &::after {
+        content: '';
+        display: block;
+        margin-top: 26px;
+        background-color: #142480;
+        width: 320px;
+        height: 2px;
+        @include mq() {
+            width: 180px;
+        }
+    }
+    &--white {
+        @extend .sec-title__ja;
+        color: #fff;
+        &::after {
+            background-color: #fff;
+        }
+    }
+}
+.sec-title__lead {
+    @include font-size(16);
+    color: $font-color;
+    &--white {
+        @extend .sec-title__lead;
+        color: #fff;
+    }
+}

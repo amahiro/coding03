@@ -1,0 +1,120 @@
+.about {
+    margin-bottom: 240px;
+    opacity: 0;
+    position: relative;
+    @include mq(tab) {
+        margin-bottom: 200px;
+    }
+    @include mq(sp) {
+        margin-bottom: 80px;
+    }
+}
+.about__inner {
+    margin-left: auto;
+    padding: 0 4%;
+    background-color: $background-color;
+    width: 83%;
+    @include mq() {
+        padding: 0 2%;
+        width: 90%;
+    }
+    @include mq(tab) {
+        padding: 0 20px;
+    }
+    @include mq(sp) {
+        width: 100%;
+    }
+}
+.about__body {
+    padding: 50px 0 80px;
+    @include mq() {
+        padding: 30px 0;
+    }
+    @include mq(tab) {
+        padding: 30px 0 0;
+    }
+    @include mq(sp) {
+        padding: 0;
+    }
+}
+.about__detail {
+    @include mq(tab) {
+        flex-direction: column;
+    }
+}
+.about__title {
+    text-align: right;
+}
+.about__text {
+    align-self: flex-start;
+    flex: 1;
+    @include mq(tab) {
+        width: 100%;
+    }
+}
+.about__title-ja {
+    margin-bottom: 60px;
+    @include mq() {
+        margin-bottom: 30px;
+    }
+}
+.about__lead {
+    margin-bottom: 260px;
+    max-width: 68%;
+    @include mq() {
+        margin-bottom: 150px;
+    }
+    @include mq(tab) {
+        margin-bottom: 40px;
+        max-width: none;
+        width: 85%;
+    }
+    @include mq(sp) {
+        margin-bottom: 30px;
+        max-width: 500px;
+        width: 100%;
+    }
+}
+.about__btn {
+    text-align: right;
+    margin-right: 13%;
+    @include mq() {
+        margin-right: 6.5%;
+    }
+    @include mq(tab) {
+        text-align: left;
+    }
+    @include mq(sp) {
+        margin-right: 0;
+        margin-bottom: 30px;
+        text-align: right;
+    }
+}
+.about__image {
+    position: relative;
+    transform: translateY(160px);
+    align-self: flex-start;
+    width: 55%;
+    > img {
+        min-height: 400px;
+    }
+    @include mq() {
+        transform: translateY(100px);
+        > img {
+            min-height: 500px;
+        }
+    }
+    @include mq(tab) {
+        transform: translateY(50px);
+        align-self: flex-end;
+        width: 80%;
+        > img {
+            min-height: auto;
+        }
+    }
+    @include mq(sp) {
+        transform: translate(0);
+        margin: 0 calc(50% - 50vw);
+        width: 100vw;
+    }
+}

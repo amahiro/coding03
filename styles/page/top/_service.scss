@@ -1,0 +1,171 @@
+.service {
+    margin-bottom: 240px;
+    @include mq(tab) {
+        margin-bottom: 150px;
+    }
+    @include mq(sp) {
+        margin-bottom: 80px;
+    }
+}
+.service__inner {
+    margin-right: auto;
+    padding: 0 4% 0;
+    background-color: #00478E;
+    width: 83%;
+    @include mq() {
+        padding: 0 2% 0;
+        width: 90%;
+    }
+    @include mq(tab) {
+        padding: 0 20px;
+        width: 100%;
+    }
+}
+.service__body {
+    padding-top: 50px;
+    @include mq() {
+        padding: 40px 0;
+    }
+    @include mq(sp) {
+        padding: 80px 0 50px;
+    }
+}
+.service__text {
+    text-align: center;
+    margin-bottom: 86px;
+    @include mq() {
+        margin-bottom: 40px;
+    }
+}
+.service__title {
+    @include mq(sp) {
+        text-align: right;
+    }
+}
+.service__title-ja {
+    margin-bottom: 60px;
+    @include mq() {
+        margin-bottom: 30px;
+    }
+    @include mq(sp) {
+        text-align: left;
+    }
+    &::after {
+        margin-left: auto;
+        margin-right: auto;
+        @include mq(sp) {
+            margin: 26px 0 0;
+        }
+    }
+}
+.service__lead {
+    @include mq() {
+        margin: 0 auto;
+        max-width: 800px;
+    }
+    @include mq(tab) {
+        max-width: 600px;
+    }
+    @include mq(sp) {
+        text-align: left;
+        margin-bottom: 30px;
+        max-width: 500px;
+        width: 100%;
+    }
+}
+.service__list {
+    transform: translate(120px,80px);
+    > .fadein {
+        opacity: 0;
+    }
+    > .scrollin {
+        animation: fadein-bottom .5s ease-in-out 1 normal forwards;
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}) {
+                animation-delay:  .15s * $i;
+            }
+        }
+    }
+    @include mq() {
+        transform: translate(80px,80px);
+    }
+    @include mq(tab) {
+        transform: translate(0,0);
+    }
+    @include mq(sp) {
+        flex-direction: column;
+    }
+}
+.service__item {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 31%;
+    height: 400px;
+    &:hover {
+        &::after {
+            opacity: .8;
+        }
+    }
+    @include mq() {
+        height: 300px;
+    }
+    @include mq(tab) {
+        height: 200px;
+    }
+    @include mq(sp) {
+        margin-bottom: 30px;
+        width: 100%;
+        max-width: 500px;
+        height: 250px;
+    }
+    > a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        > span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            white-space: nowrap;
+            font-weight: bold;
+            @include font-size(40);
+            color: #fff;
+            z-index: 20;
+            @include mq() {
+                @include font-size(24);
+            }
+            @include mq(tab) {
+                @include font-size(16);
+            }
+            @include mq(sp) {
+                @include font-size(20);
+            }
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        opacity: .5;
+        transition: all .3s;
+    }
+    &:first-child {
+        background-image: url(../../../images/phone-292994_640.jpg);
+    }
+    &:nth-child(2) {
+        background-image: url(../../../images/work-5382501_640.jpg);
+    }
+    &:last-child {
+        background-image: url(../../../images/analogue-2846297_640.jpg);
+    }
+}

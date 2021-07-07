@@ -1,0 +1,4 @@
+@mixin font-size($size: 10) {//html要素に62.5%をつける
+    font-size: $size + px;//引数の値*px
+    font-size: ($size / 10) * 1rem;
+}

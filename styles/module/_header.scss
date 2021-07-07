@@ -1,0 +1,14 @@
+.header {
+    opacity: 0;
+}
+.header__inner {
+    margin: 0 auto;
+    width: 82%;
+    @include mq(pc-sm) {
+        padding: 0 20px;
+        width: 100%;
+    }
+    @include mq(sp) {
+        padding-top: 10px;
+    }
+}

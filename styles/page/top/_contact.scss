@@ -1,0 +1,39 @@
+.contact {
+    position: relative;
+    margin-bottom: 240px;
+    padding: 100px 0;
+    text-align: center;
+    background-image: url(../../../images/buildings-984195_1280.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include mq(tab) {
+        margin-bottom: 150px;
+    }
+    @include mq(sp) {
+        padding: 80px 20px;
+        margin-bottom: 80px;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #fff;
+        opacity: .7;
+    }
+}
+.contact__title {
+    position: relative;
+    margin-bottom: 45px;
+    z-index: 10;
+    @include mq(sp) {
+        margin-bottom: 30px;
+    }
+}
+.contact__btn {
+    position: relative;
+    z-index: 10;
+}

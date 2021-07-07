@@ -1,0 +1,142 @@
+.main-visual {
+    padding: 136px 0 160px;
+    position: relative;
+    @include mq() {
+        padding: 100px 0;
+    }
+    @include mq(sp) {
+        padding: 20px 0 80px;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: $background-color;
+        width: 83%;
+        height: 600px;
+        z-index: -10;
+        @include mq() {
+            height: 550px;
+            width: 90%;
+        }
+        @include mq(tab) {
+            height: 450px;
+        }
+        @include mq(sp) {
+            width: 100%;
+        }
+    }
+}
+.main-visual__body {
+    padding: 115px 0 144px;
+    position: relative;
+    @include mq() {
+        padding: 100px 0;
+    }
+    @include mq(sp) {
+        padding: 80px 10px;
+    }
+}
+.main-visual__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 83%;
+    height: 100%;
+    z-index: -1;
+    @include mq() {
+        width: 90%;
+    }
+    @include mq(sp) {
+        width: 100%;
+    }
+    > span {
+        clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,71,142,.7);
+        width: 60%;
+        height: 100%;
+        z-index: -1;
+    }
+    &::before {
+        content: '';
+        clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(../../../images/work-731198_1280.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 60%;
+        height: 100%;
+        z-index: -1;
+    }
+    &::after {
+        content: '';
+        clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-image: url(../../../images/buildings-984195_1280.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 60%;
+        height: 100%;
+        z-index: -2;
+    }
+}
+.main-visual__text {
+    margin-left: 100px;
+    z-index: 10;
+    @include mq() {
+        margin-left: 50px;
+    }
+    @include mq(tab) {
+        margin-left: 20px;
+    }
+    @include mq(sp) {
+        margin-left: 0;
+    }
+}
+.main-visual__title {
+    margin-bottom: 26px;
+    line-height: 1.3;
+    font-weight: bold;
+    @include font-size(62);
+    color: #fff;
+    @include mq() {
+        @include font-size(45);
+    }
+    @include mq(tab) {
+        @include font-size(30);
+    }
+    @include mq(sp) {
+        @include font-size(26);
+    }
+}
+.main-visual__lead {
+    margin-bottom: 98px;
+    line-height: 1.3;
+    @include font-size(16);
+    color: #fff;
+    @include mq() {
+        margin-bottom: 50px;
+    }
+    @include mq(tab) {
+        @include font-size(14);
+    }
+    @include mq(sp) {
+        @include font-size(12);
+    }
+}
+.main-visual__br {
+    display: none;
+    @include mq(sp) {
+        display: block;
+    }
+}
